@@ -34,8 +34,8 @@ echo "============= create lvm ================"
 echo y|pvcreate /dev/sdb2
 vgcreate $vg_name /dev/sdb2
 
-echo y|lvcreate -L 400G -n root $vg_name
-echo y|lvcreate -L 600G -n var $vg_name
+echo y|lvcreate -L 30G -n root $vg_name
+echo y|lvcreate -L 20G -n var $vg_name
 echo y|lvcreate -l 100%FREE -n home $vg_name
 
 
